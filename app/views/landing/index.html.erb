@@ -1,0 +1,7 @@
+<h1> Search for Nearby Alternative Fuel Stations </h1>
+
+<%= form_with url: "/stations", method: :get, local: :true do |f|  %>
+<%= f.label :zipcode, 'Zip Code' %>
+<%= f.text_field :zipcode %>
+<%= f.submit 'Search' %>
+<% end %>
