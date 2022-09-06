@@ -1,2 +1,9 @@
 <h1> Nearby Stations </h1>
 
+<div id="stations">
+  <% @stations.each do |station| %>
+    <h2> <%= station[:station_name] %> </h2>
+    <h3> <%= "#{station[:street_address]} #{station[:city]}, #{station[:state]} #{station[:zip]}" %> </h3>
+    <h3> <%= station[:access_code].capitalize %> </h3>
+  <% end %>
+</div>
