@@ -1,15 +1,15 @@
-<div class="shadow overflow-hidden rounded border-b border-gray-200">
+<%= turbo_frame_tag "stations", class: "shadow overflow-hidden rounded border-b border-gray-200" do %>
   <table class="min-w-full bg-white">
     <thead class="bg-gray-800 text-white">
       <tr>
         <th id="station-name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
-          <span>Station</span>
+          <%= sort_link("station", "Station") %>
         </th>
         <th id="station-address" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
-          <span>Address</span>
+          <%= sort_link("address", "Address") %>
         </th>
         <th id="station-access-code" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
-          <span>Access Code</span>
+          <%= sort_link("access_code", "Access Code") %>
         </th>
       </tr>
     </thead>
@@ -24,4 +24,4 @@
       <% end %>
     </tbody>
   </table>
-</div>
+<% end %>

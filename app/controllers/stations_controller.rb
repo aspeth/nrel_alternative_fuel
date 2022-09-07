@@ -6,4 +6,9 @@ class StationsController < ApplicationController
     
     @stations = hash_response[:fuel_stations]
   end
+
+  def list
+    stations = Station.includes(:location).order("#{params[:column]}")
+    render(partial: 'stations', locals: {stations: stations})
+  end
 end 
