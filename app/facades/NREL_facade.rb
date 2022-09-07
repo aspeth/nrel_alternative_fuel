@@ -8,9 +8,10 @@ class NRELFacade
       stations.map do |station|
         location.stations << Station.create!(name: station[:station_name], address: "#{station[:street_address]} #{station[:city]}, #{station[:state]} #{station[:zip]}", location_id: location.id, access_code: station[:access_code])
       end
+      
+      location.save!
     end
     
-    location.save!
     location.stations
   end
 end
