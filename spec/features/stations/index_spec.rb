@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'stations index page' do
   it 'has a list of nearby stations' do
-    visit '/stations?location=80207'
+    visit '/stations?zipcode=80207'
 
     within "#stations" do
       expect(page).to have_content("Denver Museum of Nature & Science")

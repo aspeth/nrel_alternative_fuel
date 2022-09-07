@@ -1,0 +1,32 @@
+<%= turbo_frame_tag "stations", class: "shadow overflow-hidden rounded border-b border-gray-200" do %>
+  <table class="min-w-full bg-white">
+    <thead class="bg-gray-800 text-white">
+      <tr>
+        <th id="station-name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "name" %>
+          <%= sort_link("name", "Name") %>
+        </th>
+        <th id="station-address" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "address" %>
+          <%= sort_link("address", "Address") %>
+        </th>
+        <th id="station-access-code" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "access_code" %>
+          <%= sort_link("access_code", "Access Code") %>
+        </th>
+      </tr>
+    </thead>
+    <thead class="bg-gray-800 text-white">
+</thead>
+
+    <tbody class="text-gray-700">
+      <% stations.each do |station| %>
+        <tr>
+          <td class="text-left py-3 px-6"><%= station.name %></td>
+          <td class="text-left py-3 px-6"><%= station.address %></td>
+          <td class="text-left py-3 px-6"><%= station.access_code %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
