@@ -7,7 +7,7 @@ RSpec.describe 'stations index page' do
     within "#stations" do
       expect(page).to have_content("Denver Museum of Nature & Science")
       expect(page).to have_content("2001 Colorado Blvd Denver, CO 80205")
-      expect(page).to have_content("Public")
+      expect(page).to have_content("public")
       
       expect(page).to_not have_content("Los Angeles County - Registrar-Recorder - County Clerk")
       expect(page).to_not have_content("12400 E Imperial Hwy Norwalk, CA 90650")
