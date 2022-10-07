@@ -13,5 +13,8 @@
 * Enter an address into the search field, hit enter
 * Click a column name to sort by that field, click again to reverse order
 
-## Future feature
+## Future features
 * Add an arrow to designate whether column is currently sorted by ascending / descending
+* Display more of the data returned by the API
+    * Fuel type
+* Add ability to sort by fuel type
