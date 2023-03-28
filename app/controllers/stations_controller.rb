@@ -1,6 +1,6 @@
 class StationsController < ApplicationController
   def index
-    @stations = NRELFacade.get_stations(params[:zipcode])
+    @stations = NREL::Service.get_stations(params[:zipcode])
   end
 
   def list
